@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 
 const routes = require('./routes')
+require('./config/mongoose')
 
 app.use(routes)
 
