@@ -27,4 +27,15 @@ router.post('/', (req, res) => {
     .catch(error => console.log(error))
 })
 
+router.get('/:urlSuffix', (req, res) => {
+  const shortUrl = hostUrl + req.params.urlSuffix
+
+  Url.findOne({ shortUrl })
+    .lean()
+    .then(url => {
+      res.redirect(url.originalUrl)
+    })
+    .catch(error => console.log(error))
+})
+
 module.exports = router
