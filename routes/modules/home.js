@@ -5,4 +5,8 @@ router.get('/', (req, res) => {
   res.render('index')
 })
 
+router.post('/', (req, res) => {
+  res.render('index', req.body)
+})
+
 module.exports = router

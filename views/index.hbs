@@ -1,8 +1,13 @@
 <div class="d-flex flex-column align-items-center">
   <h1 class="mb-3">URL Shortener</h1>
   <img src="images/url-shortener.png" alt="URL Shortener" style="width: 150px; height: 150px;" class="mb-5">
-  <form action="/" method="POST" class="d-flex flex-column align-items-center">
-    <input type="url" class="form-control mb-3" name="originalUrl" placeholder="Input URL here" size="40">
+  <form action="/" method="POST" class="d-flex flex-column align-items-center mb-3">
+    <input type="url" class="form-control mb-3" name="originalUrl" placeholder="Input URL here" size="40"
+      value="{{originalUrl}}">
     <button type="submit" class="btn btn-outline-primary">Shorten</button>
   </form>
+  {{#if originalUrl}}
+  <h4>Success! Please use this link:</h4>
+  <a href="{{originalUrl}}">{{originalUrl}}</a>
+  {{/if}}
 </div>
