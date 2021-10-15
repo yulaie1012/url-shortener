@@ -3,7 +3,7 @@
   <img src="images/url-shortener.png" alt="URL Shortener" style="width: 150px; height: 150px;" class="mb-5">
   <form action="/" method="POST" class="d-flex flex-column align-items-center mb-3">
     <input type="url" class="form-control mb-3" name="originalUrl" placeholder="Input URL here" size="40"
-      value="{{originalUrl}}">
+      value="{{originalUrl}}" required>
     <button type="submit" class="btn btn-outline-primary">Shorten</button>
   </form>
   {{#if shortUrl}}
